@@ -47,6 +47,7 @@ contact.addEventListener('click', () => {
     phoneDiv.appendChild(phone);
     contactDiv.appendChild(phoneDiv);
     const emailDiv = document.createElement('div');
+    emailDiv.classList.add('contact-method');
     const email = document.createElement('h2');
     email.textContent = 'management@birriabirriatacoz.com';
     const emailIcon = new Image();
