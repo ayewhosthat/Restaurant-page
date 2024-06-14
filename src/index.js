@@ -23,7 +23,10 @@ function loadPage() {
 loadPage();
 
 const home = document.querySelector('.home');
-home.addEventListener('click', loadPage);
+home.addEventListener('click', () => {
+    clearPage();
+    loadPage();
+});
 
 function clearPage() {
     element.innerHTML = '';
@@ -55,6 +58,5 @@ contact.addEventListener('click', () => {
     emailDiv.appendChild(emailIcon);
     emailDiv.appendChild(email)
     contactDiv.appendChild(emailDiv);
-
     element.appendChild(contactDiv);
 });

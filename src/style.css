@@ -42,3 +42,28 @@ div#content {
 #content > h2 {
     font-weight: bold;
 }
+
+.contact-div {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    background-color: white;
+    color: black;
+    border-radius: 16px;
+    height: 60%;
+    width: 40%;
+    padding: 2%;
+}
+
+.contact-div > h1 {
+    align-self: center;
+    justify-self: center;
+}
+
+.contact-method {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.contact-method > img {
+    height: 40%;
+}
