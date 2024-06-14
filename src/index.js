@@ -1,1 +1,3 @@
-console.log('If you see this, then all is working properly so far!');
+import './style.css';
+import Food from './birria_tacos.png'
+
