@@ -67,3 +67,17 @@ div#content {
 .contact-method > img {
     height: 40%;
 }
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.item-price, .item-name {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.item-description {
+    font-style: italic;
+}
