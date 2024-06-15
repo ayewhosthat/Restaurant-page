@@ -60,3 +60,58 @@ contact.addEventListener('click', () => {
     contactDiv.appendChild(emailDiv);
     element.appendChild(contactDiv);
 });
+
+function createMenuItem(item, price, description) {
+    const menuItem = document.createElement('div');
+    const left = document.createElement('div');
+    left.classList.add('item-left');
+    const right = document.createElement('div');
+    right.classList.add('itemright');
+    menuItem.classList.add('menu-item');
+    const itemName = document.createElement('p');
+    itemName.classList.add('item-name');
+    itemName.textContent = item;
+    const itemPrice = document.createElement('p');
+    itemPrice.classList.add('item-price');
+    itemPrice.textContent = price;
+    const itemDescription = document.createElement('p');
+    itemDescription.classList.add('item-description');
+    itemDescription.textContent = description;
+    left.appendChild(itemName);
+    left.appendChild(itemDescription);
+    right.appendChild(itemPrice);
+    menuItem.appendChild(left);
+    menuItem.appendChild(right);
+    return menuItem;
+}
+
+const menu = document.querySelector('.menu');
+menu.addEventListener('click', () => {
+    clearPage();
+    const menu = document.createElement('div');
+    const heading = document.createElement('h1');
+    heading.textContent = 'Menu';
+    const birriaTacosDescription = `Our signature rich and cheesy birria tacos, served with a pot of dipping consomme and plenty of 
+    freshly made pico de gallo for added freshness and zing`
+    const birriaTacos = createMenuItem('Birria Tacos', '\$18', birriaTacosDescription);
+    const loadedFriesDescription = `Crispy, freshly made in-house fries topped with our signature slow cooked birria beef, 
+    sour cream, onions, cilantro, and tomatoes`;
+    const loadedFries = createMenuItem('Loaded Fries', '\$12', loadedFriesDescription);
+    const quesadillasDescription = `Cheesy, toasty tortillas filled with your choice of flame-grilled chicken or 
+    slow-cooked beef`;
+    const quesadillas = createMenuItem('Quesadillas', '\$16', quesadillasDescription);
+    const churrosDescription = `Fluffy, doughy churros dusted with cinammon sugar, and paired with a sweet yet bitter 
+    chocolate sauce`;
+    const churros = createMenuItem('Churros', '\$4', churrosDescription);
+    const burritoDescription = `10\" burrito, customized to your heart\'s content with our selection of meat, vegetables, 
+    and mouthwatering sauces`;
+    const burrito = createMenuItem('Burrito', '\$9', burritoDescription);
+    const drinkDescription = `Our sweet lemon green tea is the perfect balance of refreshment and satisfaction`;
+    const drink = createMenuItem('Sweet Lemon Green Tea', '\$5', drinkDescription);
+    
+    const arrItems = [heading, birriaTacos, loadedFries, quesadillas, churros, burrito, drink];
+    for (const item of arrItems) {
+        menu.appendChild(item);
+    }
+    element.appendChild(menu);
+});
